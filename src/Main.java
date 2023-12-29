@@ -5,8 +5,9 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("What would you like reversed?\n(default is : Hello, Java!)");
+		System.out.println("What would you like reversed?\n(default is : Hello, Java!)\n");
 		String input = scanner.nextLine();
+		scanner.close();
 		
 		char[] argumentCharacters = input.toCharArray();
 		
@@ -14,15 +15,12 @@ public class Main {
 			argumentCharacters = "Hello, Java!".toCharArray();
 		}
 		
-		String reversed = "";
+		System.out.println(input + " becomes: ");
 		
 		for (int i = argumentCharacters.length - 1; i >= 0; i--) {
-			reversed += argumentCharacters[i];
+			System.out.print(argumentCharacters[i]);
 		}
-		
 				
-		System.out.println("\n" + input + " becomes: ");
-		System.out.println(reversed);
 	}
 
 }
